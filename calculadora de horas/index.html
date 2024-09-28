@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculador de horas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+      <div class="container">
+        <h1>Calculadora de Horas Trabalhadas</h1>
+
+        <form id="work-hours-form">
+            <div class="form-group">
+                <label for="start-time">Hora de Início:</label>
+                <input type="time" id="start-time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="break-time">Intervalo (em horas e minutos):</label>
+                <input type="time" id="break-time" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="end-time">Hora de Término:</label>
+                <input type="time" id="end-time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hourly-rate">Valor hora:</label>
+                <input type="number" id="hourly-rate" min="0" placeholder="Ex.: 45" required>
+            </div>
+
+            <button type="button" id="calculate-hours">Calcular Horas</button>
+        </form>
+
+        <div id="result" class="result">
+            <h2>Resultado:</h2>
+            <p id="hours-worked"></p>
+            <p id="hourly-cost"></p>
+        </div>
+    </div>
+    
+    <footer class="container">
+        <p>&copy; <span id="current-year"></span> - Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="script/script.js"></script>
+</body>
+</html>
